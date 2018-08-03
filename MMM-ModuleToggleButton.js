@@ -10,7 +10,7 @@ Module.register('MMM-ModuleToggleButton', {
   defaults: {
     buttonGpioPin: 6,
     debounceTimeoutInMilliseconds: 500,
-    notificationName: 'BUTTON_PRESSED',
+    notificationName: 'TOGGLE_BUTTON_PRESSED',
     moduleNames: [
     ]
   },
