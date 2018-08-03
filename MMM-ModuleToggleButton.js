@@ -19,9 +19,9 @@ Module.register('MMM-ModuleToggleButton', {
 
   _isDisplayed: false,
 
-	start: function() {
-		this.sendSocketNotification('TOGGLE_BUTTON_CONFIG', this.config);
-	}.
+  start: function () {
+    this.sendSocketNotification('TOGGLE_BUTTON_CONFIG', this.config);
+  },
 
   notificationReceived(notification, payload, sender) {
     if (notification === 'DOM_OBJECTS_CREATED') {
@@ -29,15 +29,15 @@ Module.register('MMM-ModuleToggleButton', {
     }
   },
 
-	socketNotificationReceived: function(notification, payload) {
-		if (notification === this.config.notificationName){
-			if (this._isDisplayed) {
+  socketNotificationReceived: function (notification, payload) {
+    if (notification === this.config.notificationName) {
+      if (this._isDisplayed) {
         this._hideTargetModules();
       } else {
         this._showTargetModules();
       }
-		}
-	},
+    }
+  },
 
   _hideTargetModules() {
     const targetModules = this._getTargetModules();
