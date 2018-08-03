@@ -15,6 +15,9 @@
     "button",
     "raspberry"
   ],
+  "scripts": {
+    "postinstall": "node_modules/.bin/electron-rebuild -e ../../node_modules/electron"
+  },
   "dependencies": {
     "onoff": "latest"
   },
