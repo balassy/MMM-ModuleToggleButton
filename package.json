@@ -15,7 +15,11 @@
     "button",
     "raspberry"
   ],
+  "dependencies": {
+    "onoff": "latest"
+  },
   "devDependencies": {
+    "electron-rebuild": "^1.2.1",
     "eslint": "^5.0.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
