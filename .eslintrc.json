@@ -2,7 +2,12 @@
   "extends": "airbnb-base",
   "rules": {
     "comma-dangle": ["error", "never"],
-    "no-underscore-dangle": ["off"]
+    "linebreak-style": ["off"],
+    "max-len": ["error", { "code": 300 }],
+    "no-console": ["off"],
+    "no-plusplus": ["off"],
+    "no-underscore-dangle": ["off"],
+    "prefer-destructuring": ["off"]
   },
 	"env": {
 		"browser": true,

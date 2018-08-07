@@ -1,4 +1,4 @@
-/* global Module, MM, Log */
+/* global Module, MM */
 
 /*
  * MagicMirror Module: MMM-ModuleToggleButton (https://github.com/balassy/MMM-ModuleToggleButton)
@@ -19,17 +19,17 @@ Module.register('MMM-ModuleToggleButton', {
 
   _isDisplayed: false,
 
-  start: function () {
+  start() {
     this.sendSocketNotification('TOGGLE_BUTTON_CONFIG', this.config);
   },
 
-  notificationReceived(notification, payload, sender) {
+  notificationReceived(notification /* , payload, sender */) {
     if (notification === 'DOM_OBJECTS_CREATED') {
       this._hideTargetModules();
     }
   },
 
-  socketNotificationReceived: function (notification, payload) {
+  socketNotificationReceived(notification /* , payload */) {
     if (notification === this.config.notificationName) {
       if (this._isDisplayed) {
         this._hideTargetModules();
